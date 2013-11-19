@@ -1,0 +1,17 @@
+widi，miracast和wimo协议修改记录:
+
+1.widi修改启动widi的时候，按Home键死机问题;ffmpeg/libavformt下修改mpegts.c，对lenovo K900widi的声音支持。
+
+2.QvodDphd.apk增加了wimo入口,增加了mirrorop功能入口
+
+3.增加了wimo功能，WimoServer.apk，里面的so库，解压获取就行，调用方式：
+
+      ComponentName comp_x = new ComponentName("com.qvod.nscreens.wimo", "com.qvod.nscreens.wimo.WimoMainActivity");
+      Intent mIntent= new Intent();
+      mIntent.setComponent(comp_x);
+      mIntent.setAction("android.intent.action.VIEW");
+      mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+      startActivity(mIntent);
+
+
+        
